@@ -1,6 +1,12 @@
-## From-scratch training of tokenizer and LLM
-The repo walks through step-by-step process of from-scratch development of LLM with coupled tokenizer
-### Domain-tailoring
-The repo is designed to develop a tokenizer and an LLM for prostate cancer.
-- tokenizer with domain-specific vocabulayr, providing better coverage for domain-specific terminology than generic tokenizers
-- two-phase training of LLM
+# From-scratch Development of LLM and Tokenizer
+![](pcallm.jpg)
+The repo contains code to train a tokenizer and a decoder-only LLM from scratch 
+
+## Doamin-trailoring
+
+The repo is designed to develop an LLM for prostate cancer with clinical notes of prostate cancer patients, their radiology and pathology reports, and published literature regarding prostate cancer
+
+- Domain-specific tokenizer: tends to cover domain-specific terminology in single (or few) token(s) instead of chopping them into smaller incomprehensible tokens 
+- UMLS parsing: identification of clinical terminology in freetext clinical data
+- Phase-I training: standard next token prediction
+- Phase II training: clinical token prediction, domain-focused learning
